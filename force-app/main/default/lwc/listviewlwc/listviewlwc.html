@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Account List" icon-name="standard:account">   
+    <template lwc:if={data}>
+      <div class="slds-m-around_medium">
+        <div><b><i>{count} Accounts</i></b></div>
+          <!-- Datatable component -->
+          <lightning-datatable columns={columns} 
+                               data={data} 
+                               hide-checkbox-column="true"                                        
+                               key-field="id"></lightning-datatable>        
+      </div>
+  </template>
+  <template lwc:else><div class="slds-m-around_medium"><b>No Record to display!!</b></div></template>
+  </lightning-card>   
+</template>
